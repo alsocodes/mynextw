@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css'
 import React from 'react'
 import Landing from '../layout/Landing'
 import LandingHeader from '../component/LandingHeader'
+import LandingBrand from '../component/LandingBrand'
+import LandingService from '../component/LandingService'
 
 const Home = () => {
     return (
@@ -27,6 +29,8 @@ const Home = () => {
             </div>
             {/* <p className="font-bold">test</p> */}
             <LandingHeader />
+            <LandingBrand />
+            <LandingService />
         </Landing>
     )
 }

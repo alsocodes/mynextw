@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 import Script from 'next/script'
-const Landing = ({ children, title }) => {
+
+const TemplateSatu = ({ title, children }) => {
     return (
         <>
             <Head>
@@ -10,39 +11,25 @@ const Landing = ({ children, title }) => {
                 <meta name="description" content="" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png" />
-                {/* <link rel="stylesheet" href="styles/magnific-popup.css" />
-                <link rel="stylesheet" href="styles/slick.css" />
-                <link rel="stylesheet" href="styles/LineIcons.2.0.css" /> */}
-                {/* <link rel="stylesheet" href="styles/animate.css" /> */}
-                {/* <link rel="stylesheet" href="styles/tailwind.css" /> */}
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet"></link>
+                <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Beau+Rivage&display=swap" rel="stylesheet"></link>
             </Head>
-            <div className="bg-white-grey">
+            <div>
                 {children}
             </div>
-            {/* <Script src="" strategy="lazyOnload" /> */}
             <Script src="/js/vendor/jquery-3.5.1-min.js" />
             <Script src="/js/vendor/modernizr-3.7.1.min.js" />
-
-            {/*====== Plugins js ====== */}
             <Script src="/js/plugins.js" />
-
-            {/*====== Slick js ====== */}
             <Script src="/js/slick.min.js" />
-
-            {/*====== Scrolling Nav js ====== */}
             <Script src="/js/jquery.easing.min.js" />
             <Script src="/js/scrolling-nav.js" />
-
-            {/*====== wow js ====== */}
             <Script src="/js/wow.min.js" />
-
-            {/*====== Particles js ====== */}
             <Script src="/js/particles.min.js" />
-
-            {/*====== Main js ====== */}
             <Script src="/js/main.js" />
         </>
     )
 }
 
-export default Landing
+export default TemplateSatu

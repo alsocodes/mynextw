@@ -2,9 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import LandingHero from '../LandingHero'
 
-const LandingHeader = () => {
+const LandingSingleHeader = ({ title }) => {
     return (
-        <header className="header-area">
+        <header className="header-area bg-white-grey">
             <div className="navbar-area">
                 <div className="container relative">
                     <div className="row">
@@ -51,9 +51,23 @@ const LandingHeader = () => {
                 </div> {/* container */}
             </div> {/* navbar area */}
 
-            <LandingHero />
+            <div id="home" className="header-hero bg-blue-main">
+                <div className="container">
+                    <div className="justify-center row">
+                        <div className="w-full lg:w-2/3">
+                            <div className="pb-24 pt-32 mb-12 text-center lg:pt-40 header-hero-single">
+                                <h2 className="mb-3 text-4xl font-bold text-white header-title wow fadeInUp"
+                                    data-wow-duration="1.3s"
+                                    data-wow-delay="0.5s">{title}</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="particles-1" className="particles"></div>
+            </div>
         </header>
     )
 }
 
-export default LandingHeader
+export default LandingSingleHeader
